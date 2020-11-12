@@ -5,7 +5,7 @@ const News = ({ news }) => {
   return (
     <div className="row">
       {news.map((n) => (
-        <Article key={n.source.id} article={n} />
+        <Article key={n.url} article={n} />
       ))}
     </div>
   );
