@@ -10,12 +10,16 @@ const OPTIONS = [
   { value: "science", label: "Ciencias" },
   { value: "technology", label: "Tecnología" },
 ];
-const Form = () => {
-  const [category, CategorySelect] = useSelect("general", OPTIONS);
+const Form = ({ setQuery, initialCategory }) => {
+  const [category, CategorySelect] = useSelect(initialCategory, OPTIONS);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setQuery({ category });
+  };
   return (
     <div className={`${styles.searcher} row`}>
       <div className="col s12 m8 offset-m2">
-        <form className="row">
+        <form className="row" onSubmit={handleSubmit}>
           <h2 className={styles.heading}>Encuentra Noticias por Categoría</h2>
           <CategorySelect />
           <div className="input-field col s12">
