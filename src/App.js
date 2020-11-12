@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import Header from "./components/Header";
 import Form from "./components/Form";
+import News from "./components/News";
 
 const API_KEY = "061378f4e76d415aace426ea1e4f7c78";
 
@@ -22,6 +23,7 @@ function App() {
       <Header>Buscador de Noticias</Header>
       <div className="container white">
         <Form setQuery={setQuery} initialCategory={query.category} />
+        <News news={news} />
       </div>
     </Fragment>
   );
