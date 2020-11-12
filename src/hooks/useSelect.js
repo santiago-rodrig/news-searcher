@@ -13,8 +13,8 @@ const useSelect = (initialState, options) => {
         -- Eliga una opción --
       </option>
       {options.map((o) => (
-        <option key={o.id} value={o.value}>
-          {o.content}
+        <option key={o.value} value={o.value}>
+          {o.label}
         </option>
       ))}
     </select>

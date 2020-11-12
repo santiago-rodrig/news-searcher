@@ -2,8 +2,16 @@ import React from "react";
 import styles from "./Form.module.css";
 import useSelect from "../hooks/useSelect";
 
+const OPTIONS = [
+  { value: "general", label: "General" },
+  { value: "business", label: "Negocios" },
+  { value: "entertainment", label: "Entretenimiento" },
+  { value: "health", label: "Salud" },
+  { value: "science", label: "Ciencias" },
+  { value: "technology", label: "Tecnología" },
+];
 const Form = () => {
-  const [category, CategorySelect] = useSelect("", []);
+  const [category, CategorySelect] = useSelect("general", OPTIONS);
   return (
     <div className={`${styles.searcher} row`}>
       <div className="col s12 m8 offset-m2">
