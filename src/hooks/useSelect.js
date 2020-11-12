@@ -6,12 +6,8 @@ const useSelect = (initialState, options) => {
     <select
       className="browser-default"
       value={state}
-      defaultValue=""
       onChange={(e) => setState(e.target.value)}
     >
-      <option value="" disabled>
-        -- Eliga una opción --
-      </option>
       {options.map((o) => (
         <option key={o.value} value={o.value}>
           {o.label}
