@@ -1,12 +1,13 @@
 import React, { Fragment } from "react";
 import Header from "./components/Header";
+import Form from "./components/Form";
 
 function App() {
   return (
     <>
       <Header>Buscador de Noticias</Header>
       <div className="container white">
-        <h1>Formulario aquí</h1>
+        <Form />
       </div>
     </>
   );
